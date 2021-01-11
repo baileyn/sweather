@@ -1,5 +1,5 @@
 use dotenv::dotenv;
-use weatherstack::*;
+use weatherstack::blocking::*;
 
 fn main() {
     dotenv().ok();
