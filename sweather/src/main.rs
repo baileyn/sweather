@@ -3,6 +3,8 @@ use iced::{
     text_input, Align, Column, Container, Element, HorizontalAlignment, Length, Sandbox, Settings,
     Text, TextInput,
 };
+use log::*;
+use pretty_env_logger::*;
 use weatherstack::blocking::*;
 
 #[derive(Debug)]
@@ -45,7 +47,7 @@ impl Sandbox for Sweather {
                 self.state.location_value = value;
             }
             Message::LookupWeather => {
-                println!("Looking up weather for: {}", self.state.location_value);
+                debug!("Looking up weather for: {}", self.state.location_value);
             }
         }
     }
@@ -80,6 +82,7 @@ impl Sandbox for Sweather {
 
 fn main() -> iced::Result {
     dotenv().ok();
+    pretty_env_logger::init();
 
     Sweather::run(Settings::default())
 }

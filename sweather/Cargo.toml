@@ -11,3 +11,5 @@ weatherstack = {path = "../weatherstack", features = ["blocking"]}
 dotenv = "0.15.0"
 iced = "0.2.0"
 anyhow = "1.0.38"
+log = "0.4.11"
+pretty_env_logger = "0.4.0"
