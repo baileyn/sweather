@@ -1,0 +1,12 @@
+[package]
+name = "sweather"
+version = "0.1.0"
+authors = ["Nicholas Bailey <nicholas.j.bailey91@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+weatherstack = {path = "../weatherstack"}
+dotenv = "0.15.0"
+iced = "0.2.0"

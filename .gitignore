@@ -1,0 +1,4 @@
+/target
+/sweather/target
+/weatherstack/target
+.env
